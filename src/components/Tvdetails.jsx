@@ -158,8 +158,8 @@ const Tvdetails = () => {
       <div className="w-[100%] h-[46%] flex overflow-y-hidden mb-5 p-5">
 
         {info.detail.seasons.map((s,i)=>(
-          <div className="w-[15vh] mr-[6%]">
-               <img key={i}
+          <Link to={`${pathname}/trailer`} key={i} className="w-[15vh] mr-[6%]">
+               <img 
            className="h-[35vh] shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] min-w-[11vw] object-cover"
            src={`https://image.tmdb.org/t/p/original/${
              s.poster_path
@@ -169,7 +169,7 @@ const Tvdetails = () => {
          <h1 className="text-2xl text-zinc-400 font-semibold mt-1">
            {s.title || s.original_name || s.name || s.original_title}
          </h1>
-          </div>
+          </Link>
         ))}
        
       </div>
